@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://3hyauxf63wka"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_pst5m"]
+[ext_resource type="Texture2D" uid="uid://c03yec2tl0ahl" path="res://icon.svg" id="1_vjvg4"]
+[ext_resource type="PackedScene" uid="uid://doo7nxk6nhw0o" path="res://spinner.tscn" id="2_1ubq1"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_pst5m")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(659, 372)
+texture = ExtResource("1_vjvg4")
+
+[node name="Icon3" type="Sprite2D" parent="Icon"]
+position = Vector2(-100, -100)
+texture = ExtResource("1_vjvg4")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(200, 200)
+texture = ExtResource("1_vjvg4")
+
+[node name="Spinner" parent="." instance=ExtResource("2_1ubq1")]
+position = Vector2(944, 224)
