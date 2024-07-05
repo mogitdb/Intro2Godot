@@ -6,6 +6,7 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_pst5m")
+start_lives = 16
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(659, 372)
