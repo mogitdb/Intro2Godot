@@ -21,3 +21,36 @@ texture = ExtResource("1_vjvg4")
 
 [node name="Spinner" parent="." instance=ExtResource("2_1ubq1")]
 position = Vector2(944, 224)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MC" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "TL"
+
+[node name="Label2" type="Label" parent="CanvasLayer/MC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "TR"
+
+[node name="Label3" type="Label" parent="CanvasLayer/MC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "BL"
+
+[node name="Label4" type="Label" parent="CanvasLayer/MC"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "BR"
