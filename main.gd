@@ -3,34 +3,29 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var fruits: Array = ["apple", "banana", "orange", "grape"]
-	print("First fruit:", fruits[0])
-	print("Second fruit:", fruits[1])
-	print("Last fruit:", fruits[-1])
+	var person: Dictionary = {
+		"name": "John",
+		"age": 25,
+		"country": "Canada"
+	}
+	print("Name:", person.name)
+	print("Age:", person["age"])
+	print("Country:", person.country)
 	
-	fruits[1] = "kiwi"
-	print("Modified fruits:", fruits)
+	person.age = 30
+	print("person", person)
 	
-	var num_fruits = fruits.size()
-	print("Number of fruits:", num_fruits)
+	var num_keys = person.size()
+	print("num_keys:", num_keys)
 	
-	fruits.append("pear")
-	print("Number of fruits:", fruits)
+	person["job"] = "engineer"
+	print("person:", person)
 	
+	var person_has_job = "job" in person
+	print("person_has_job:", person_has_job)
 	
-	for fruit in fruits:
-		print(fruit)
-		print("next loop")
-		
-	for number in range(0,10,2):
-		print(number)
-		
-	# While loop
-	var count: int = 0
-	
-	while count <5:
-		print("Count:", count)
-		count += 1
+	for k in person:
+		print(k)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
