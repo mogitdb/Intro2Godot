@@ -3,79 +3,35 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var num1: int = 12
-	var num2: int = 5
+	var fruits: Array = ["apple", "banana", "orange", "grape"]
+	print("First fruit:", fruits[0])
+	print("Second fruit:", fruits[1])
+	print("Last fruit:", fruits[-1])
 	
-	var sum = num1 + num2
-	var difference = num1 - num2
-	var product = num1 * num2
-	var quotient = num1 / num2
-	var remainder = num1 / num2
+	fruits[1] = "kiwi"
+	print("Modified fruits:", fruits)
 	
-	print("Sum: ", sum)
-	print("Differencce: ", difference)
-	print("Product: ", product)
-	print("Quotient: ", quotient)
-	print("Remainder: ", remainder)
+	var num_fruits = fruits.size()
+	print("Number of fruits:", num_fruits)
 	
-	var x: int = 10
+	fruits.append("pear")
+	print("Number of fruits:", fruits)
 	
-	x += 5
-	print(x)
 	
-	x -= 3
-	print(x)
-	
-	x *= 2
-	print(x)
-	
-	x /= 4
-	print(x)
-	
-	x %= 3
-	print(x)
-	
-	var a: int = 5
-	var b: int = 8
-	
-	print("a > b:", a > b)
-	print("a < b:", a < b)
-	print("a >= b:", a >= b)
-	print("a <= b:", a <= b)
-	print("a == b:", a == b)
-	print("a != b:", a != b)
-	
-	var is_alive: bool = true
-	var is_hungry: bool = false
-	
-	var is_motivated: bool = is_alive and is_hungry
-	print("is_motivated:", is_motivated)
-	
-	var is_one_of: bool = is_alive or is_hungry
-	print("is_motivated:", is_one_of)
-	
-	print("!is_hungry:", !is_hungry)
-	
-	var age: int = 25
-	var has_license: bool = true
-	
-	if age >= 30 and has_license:
-		print("You are eligible to drive!")
-	elif age == 25: 
-		print("You are 25")
-	else:
-		print(" You are not eligible to drive.")
+	for fruit in fruits:
+		print(fruit)
+		print("next loop")
 		
-	var enemy: String = "Drgn"
+	for number in range(0,10,2):
+		print(number)
+		
+	# While loop
+	var count: int = 0
 	
-	match enemy:
-		"Dragon":
-			print("It's a %s" % enemy)
-		"Wizard":
-			print("It's not an enemy, it''s a %s!" %enemy)
-		_:
-			print("No idea what this is, kill it")
-	
+	while count <5:
+		print("Count:", count)
+		count += 1
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
